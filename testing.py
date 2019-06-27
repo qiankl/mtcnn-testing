@@ -6,6 +6,7 @@ import cv2
 import numpy as np
 #from python_wrapper import *
 import os
+import pdb
 from PIL import Image
 PNET_PYRAMID= np.array([[270,207],[192,147],[136,104],[97,74],[69,53],[49,37],[35,27],[25,19],[18,14]])
 PNET_PYRAMID_ARR= np.array([[[1, 2, 130, 99],[1, 4, 130, 99]],[[1, 2, 91, 69],[1, 4, 91, 69]],[[1, 2, 63, 47],[1, 4, 63, 47]],[[1, 2, 44, 32],[1, 4, 44, 32]],[[1, 2, 30, 22],[1, 4, 30, 22]],[[1, 2, 20, 14],[1, 4, 20, 14]],[[1, 2, 13, 9],[1, 4, 13, 9]],[[1, 2, 8, 5],[1, 4, 8, 5]],[[1, 2, 4, 2],[1, 4, 4, 2]]])
@@ -543,6 +544,7 @@ def main():
         img = drawBoxes(img, boundingboxes)
         print("3333333333")
         cv2.imshow('img', img)
+        pdb.set_trace()
         ch = cv2.waitKey(10000) & 0xFF
         print("break now")
         f.close()
